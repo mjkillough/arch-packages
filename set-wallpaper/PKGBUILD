@@ -1,0 +1,22 @@
+# Maintainer: michaeljkillough@gmail.com
+# Based on qtile AUR package.
+
+pkgname=set-wallpaper
+pkgver=1.0
+pkgrel=1
+pkgdesc="Script to change wallpaper, with optional fade from previous."
+arch=('any')
+url="https://github.com/mjkillough/set-wallpaper/"
+license=('MIT')
+depends=('python' 'python-xcffib>=0.4.1' 'python-cairocffi>=0.7.2')
+makedepends=('python-distribute')
+source=("https://github.com/mjkillough/set-wallpaper/archive/v${pkgver}.tar.gz")
+md5sums=('63e6f8e057606c6334fb035ede6917a9')
+
+package() {
+  cd "$srcdir/$pkgname-$pkgver/"
+
+  # install
+  msg "Running setup.py"
+  python setup.py install --root=${pkgdir} --prefix=/usr
+}
