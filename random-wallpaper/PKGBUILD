@@ -2,16 +2,16 @@
 # Based on qtile AUR package.
 
 pkgname=random-wallpaper
-pkgver=1.1
+pkgver=1.2
 pkgrel=1
 pkgdesc="Simple script to maintain a collection of random wallpapers in a directory."
 arch=('any')
 url="https://github.com/mjkillough/random-wallpaper/"
 license=('MIT')
-depends=('python' 'python-requests>=2.12.4' 'python-xdg>=0.25')
+depends=('python' 'python-requests>=2.21.0' 'python-xdg>=0.26')
 makedepends=('python-distribute')
 source=("https://github.com/mjkillough/random-wallpaper/archive/v${pkgver}.tar.gz")
-md5sums=('35bdea5c32e06607869e8c5df78c03ad')
+md5sums=('63750b793010316432d0ea07473688e2')
 
 package() {
   cd "$srcdir/$pkgname-$pkgver/"
